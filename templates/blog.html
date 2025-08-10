@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Medical Health Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        padding: 3rem 0;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .blog-card {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-left: 4px solid #007bff;
+      }
+
+      .blog-card h2 {
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      .blog-card h3 {
+        color: #007bff;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .blog-card p, .blog-card li {
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .blog-card ol, .blog-card ul {
+        padding-left: 1.5rem;
+      }
+
+      .blog-card li {
+        margin-bottom: 0.8rem;
+      }
+
+      .highlight {
+        background: #e3f2fd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #2196f3;
+        margin: 1.5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>Medical Health Center Blog</h1>
+        <p class="lead">Insights into AI-Powered Healthcare Solutions</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-card">
+        <h2>Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h2>
+
+        <p>
+          In the age of technology and information, access to accurate and timely healthcare is more critical than ever.
+          With the increasing importance of remote healthcare solutions, we embarked on a journey to develop a
+          symptom-based disease diagnosis web application. Leveraging Flask for the backend and a Support Vector Machine (SVM)
+          model, we created a user-friendly platform that can help users identify potential illnesses based on their
+          reported symptoms.
+        </p>
+
+        <h3>The Problem</h3>
+        <p>
+          The project began with recognizing a common issue: people often experience symptoms and want quick answers
+          about their health concerns. It can be challenging to differentiate between various diseases, especially
+          when symptoms overlap. Our goal was to provide a convenient solution for users to input their symptoms
+          and receive potential diagnoses along with comprehensive health recommendations.
+        </p>
+
+        <h3>The Solution</h3>
+        <p>
+          We developed a web app that allows users to enter a list of symptoms they are experiencing. The app then
+          uses a pre-trained Support Vector Machine (SVM) model to predict the most likely disease based on the
+          provided symptoms. Here's how it works:
+        </p>
+
+        <ol>
+          <li><strong>Symptom Input:</strong> Users enter their symptoms through a user-friendly interface. The web app supports a wide range of 132 different symptoms, making it versatile for different scenarios.</li>
+          <li><strong>Machine Learning Model:</strong> We trained multiple models including SVM, Random Forest, Gradient Boosting, KNeighbors, and Naive Bayes using a comprehensive dataset containing 4,920 records of symptoms and corresponding diseases. The SVM model achieved 100% accuracy and was selected as our final model.</li>
+          <li><strong>Disease Prediction:</strong> The app uses the SVM model to predict the most likely disease from 41 different conditions, providing users with instant information about potential health concerns.</li>
+          <li><strong>Comprehensive Recommendations:</strong> To enhance user experience, the app provides detailed information about the predicted disease, including descriptions, recommended precautions, medications, dietary advice, and workout tips.</li>
+        </ol>
+
+        <h3>Technical Implementation</h3>
+        <div class="highlight">
+          <p><strong>Dataset:</strong> Our model was trained on a dataset with 4,920 samples and 133 features (132 symptoms + 1 target disease)</p>
+          <p><strong>Model Performance:</strong> All tested models (SVM, Random Forest, Gradient Boosting, KNeighbors, MultinomialNB) achieved 100% accuracy</p>
+          <p><strong>Final Model:</strong> Support Vector Machine with linear kernel, saved as 'svc.pkl' for deployment</p>
+        </div>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>User-Friendly Interface:</strong> The web app boasts an intuitive and easy-to-navigate interface, ensuring that users can input their symptoms without any hassle.</li>
+          <li><strong>Accurate Predictions:</strong> Leveraging machine learning, our SVM model provides 100% accurate disease predictions based on the symptoms provided by the user.</li>
+          <li><strong>Comprehensive Information:</strong> In addition to predictions, the app offers comprehensive information about the predicted disease, including descriptions, precautions, medications, diet recommendations, and workout tips.</li>
+          <li><strong>Educational Content:</strong> To empower users with knowledge, the app includes informative content about various health topics and AI-powered healthcare solutions.</li>
+          <li><strong>Multiple Disease Coverage:</strong> The system can diagnose 41 different diseases ranging from common conditions like fungal infections to more complex ones like hepatitis variants.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>
+          Our Symptom-Based Disease Diagnosis Web App brings the power of machine learning and healthcare information
+          to the fingertips of users. It serves as a valuable resource for individuals looking to gain insights into
+          their health conditions quickly and conveniently. By combining advanced SVM technology with comprehensive
+          healthcare databases, we aim to make healthcare more accessible and user-centric.
+        </p>
+
+        <p>
+          In an era where remote healthcare solutions are gaining prominence, this project represents a significant
+          step forward in providing accessible and reliable healthcare information to the masses. With 100% model
+          accuracy and comprehensive health recommendations, we hope that this project will contribute to better
+          health awareness and ultimately improve the well-being of individuals worldwide.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
